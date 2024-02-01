@@ -43,5 +43,6 @@ An android App that provides eBay product search and wishlist management.
    - Good-looking Android app with a focus on UI and page design.
 
 ## Screenshots
-![Image Alt Text](screenshots/sample01.png)
+<img src="screenshots/sample01.png" alt="Image Alt Text" width="568" height="511">
+
 
