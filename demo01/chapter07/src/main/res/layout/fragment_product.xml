@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+
+    <!-- Add ProgressBar and TextView for loading -->
+    <ProgressBar
+        android:id="@+id/pb_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        style="?android:attr/progressBarStyleLarge" />
+
+    <TextView
+        android:id="@+id/tv_loading_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb_progressbar"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:textColor="@color/purple"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Fetching Product Details..." />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<!--        android:layout_below=""-->
+
+
+        <LinearLayout
+            android:layout_marginHorizontal="5dp"
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_pictures"
+                android:layout_width="match_parent"
+                android:layout_height="370dp"/>
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="title" />
+
+<!--            &lt;!&ndash; Price &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_price"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Price" />-->
+
+<!--            &lt;!&ndash; ShippingCost &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_shipping_cost"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="ShippingCost" />-->
+
+
+            <TextView
+                android:id="@+id/tv_price_shippingcost"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="Price"
+                android:textColor="@color/purple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <!-- Highlights: Price & Brand -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Highlights" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price" />
+
+            <TextView
+                android:id="@+id/tv_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brand" />
+
+
+            <View
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <!-- Specifics -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Specifications" />
+
+            <TextView
+                android:id="@+id/tv_specifics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Specifics" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

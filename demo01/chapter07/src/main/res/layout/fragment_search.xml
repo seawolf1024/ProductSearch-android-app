@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--</FrameLayout>-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="30px"
+        android:paddingBottom="30px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px">
+
+        <!--    Search-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keyword"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/et_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Keyword.."
+            android:inputType="text"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tv_keyword_validation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter mandatory field."
+            android:textColor="@color/red"
+            android:visibility="gone"/>
+
+        <!--    Category-->
+        <TextView
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="18sp"/>
+        <Spinner
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="20px"
+            android:id="@+id/sp_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"/>
+
+        <!--    Condition-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Condition"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cb_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New" />
+
+            <CheckBox
+                android:id="@+id/cb_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Used" />
+
+            <CheckBox
+                android:id="@+id/cb_unspecified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unspecified" />
+        </LinearLayout>
+
+
+        <!--    Shipping Options-->
+        <TextView
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shipping Options"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cb_local_pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Local Pickup" />
+
+            <CheckBox
+                android:id="@+id/cb_free_shipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free Shippping" />
+        </LinearLayout>
+
+
+
+        <!--  Enable  Nearby Search-->
+        <LinearLayout
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Enable Nearby Search"
+                android:textSize="18sp"/>
+            <CheckBox
+                android:id="@+id/cb_enable_nearby_search"
+                android:checked="false"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+
+
+        <!--    From-->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--        Distance-->
+            <TextView
+                android:layout_marginTop="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Distance"
+                android:textSize="18sp"/>
+            <!--        Input zipcode-->
+            <EditText
+                android:id="@+id/et_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Distance.."
+                android:inputType="text"
+                android:textSize="18sp"/>
+
+            <RadioGroup
+                android:id="@+id/rg_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--            Use currLoation?-->
+                <RadioButton
+                    android:id="@+id/rb_currlocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Location"/>
+
+                <!--            Use input zipcode?-->
+                <RadioButton
+                    android:id="@+id/rb_zipcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Input Zip Code"/>
+            </RadioGroup>
+
+            <!--        Input zipcode-->
+            <EditText
+                android:enabled="false"
+                android:id="@+id/et_zipcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Zipcode.."
+                android:inputType="text"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/tv_zipcode_validation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please enter mandatory field."
+                android:textColor="@color/red"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+
+
+
+
+        <!--    Search & Clear-->
+        <LinearLayout
+            android:layout_marginTop="50px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="20px"
+                android:background="@color/orange"
+                android:id="@+id/btn_search"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Search"/>
+
+            <Button
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="20px"
+                android:background="@color/orange"
+                android:id="@+id/btn_clear"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Clear"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+

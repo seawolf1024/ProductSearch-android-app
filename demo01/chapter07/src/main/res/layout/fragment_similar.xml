@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!-- Add ProgressBar and TextView for loading -->
+    <ProgressBar
+        android:id="@+id/pb_progressbar_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        style="?android:attr/progressBarStyleLarge" />
+
+    <TextView
+        android:id="@+id/tv_loading_text_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb_progressbar_4"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:textColor="@color/purple"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Fetching Similar Products..." />
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- fragment_similar.xml -->
+    <Spinner
+        android:id="@+id/sp_sortBy"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:spinnerMode="dropdown"
+        android:entries="@array/sort_by_options"/>
+
+    <Spinner
+        android:id="@+id/sp_orderBy"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:spinnerMode="dropdown"
+        android:entries="@array/order_by_options"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_similar_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
+
+</RelativeLayout>

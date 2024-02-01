@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/selector_shopping_cart.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/cart_remove" />
+    <item android:drawable="@drawable/cart_plus" />
+</selector>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".ProductDetailActivity">-->
+
+
+<!--</LinearLayout>-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+    <!-- Title Bar -->
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/ib_return"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:src="@drawable/arrow_left"/>
+        <TextView
+            android:id="@+id/tv_title_bar"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            android:gravity="left"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:text="Product Detail"
+            android:textStyle="bold"
+
+            android:maxLines="1"
+            android:ellipsize="end"
+
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+        <ImageButton
+            android:id="@+id/ib_facebook"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:src="@drawable/facebook"/>
+    </LinearLayout>
+
+<com.google.android.material.tabs.TabLayout
+    android:id="@+id/tl_tabLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:tabMode="fixed"
+    android:layout_below="@id/ll_title"
+    app:tabGravity="fill"/>
+
+<androidx.viewpager2.widget.ViewPager2
+    android:id="@+id/vp_viewPager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/tl_tabLayout"/>
+
+    <TextView
+        android:id="@+id/tv_itemId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
+</RelativeLayout>
